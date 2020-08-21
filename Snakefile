@@ -5,6 +5,27 @@ import glob, os
 
 # --- Build Rules --- #
 
+## full_search
+rule full_search:
+    output:
+        "out/tweets.json"
+    shell:
+        "twarc search '#ruokay OR #ruok OR #RUOK OR ruokday OR ruok OR #theresmoretosay OR #RUOkay OR saneaustralia OR SuicidePrevAU OR beyondblue OR LifelineAust OR blackdoginst OR from:ruokday OR from:SaneAustralia' OR from:SuicidePrevAU OR from:beyondblue OR from:LifelineAust OR from:blackdoginst > {output}"
+
+## test_search
+rule test_search:
+    output:
+        "out/test_search.json"
+    shell:
+        "twarc search '#ruokay OR saneaustralia' > {output}"
+
+## test_search_user
+rule test_search_user:
+    output:
+        "out/test_search_user.json"
+    shell:
+        "twarc search 'from:ruokday' > {output}"
+
 ## configure: sets up configuration for twarc
 rule configure:
     shell:
