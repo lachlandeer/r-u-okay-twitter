@@ -10,7 +10,7 @@ rule full_search:
     output:
         "out/tweets.json"
     shell:
-        "twarc search '#ruokay OR #ruok OR #RUOK OR ruokday OR ruok OR #theresmoretosay OR #RUOkay OR saneaustralia OR SuicidePrevAU OR beyondblue OR LifelineAust OR blackdoginst OR from:ruokday OR from:SaneAustralia' OR from:SuicidePrevAU OR from:beyondblue OR from:LifelineAust OR from:blackdoginst > {output}"
+        "twarc search '#ruokay OR #ruok OR #RUOK OR ruokday OR ruok OR #theresmoretosay OR #RUOkay OR saneaustralia OR SuicidePrevAU OR beyondblue OR LifelineAust OR blackdoginst OR from:ruokday OR from:SaneAustralia OR from:SuicidePrevAU OR from:beyondblue OR from:LifelineAust OR from:blackdoginst' > {output}"
 
 ## test_search
 rule test_search:
