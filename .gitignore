@@ -2,3 +2,4 @@
 twarc.log
 .snakemake
 out/*
+tweet_archive
